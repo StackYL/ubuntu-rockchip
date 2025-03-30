@@ -28,7 +28,7 @@ cd linux-rockchip
 git checkout "${KERNEL_BRANCH}"
 
 #
-sed -i 's/ap6275p/ap6276p/g' debian.rockchip/config/config.common.ubuntu
+cp ../../config/kernel/config.common.ubuntu debian.rockchip/config/config.common.ubuntu
 cp ../../overlay/kernel/rk3588-smart-am60.dts arch/arm64/boot/dts/rockchip/
 echo 'dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588-smart-am60.dtb' >> arch/arm64/boot/dts/rockchip/Makefile
 sed -i '187a\        seq_puts(m, "model name\\t: Rockchip RK3588\\n");' arch/arm64/kernel/cpuinfo.c
