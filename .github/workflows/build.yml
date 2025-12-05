@@ -15,6 +15,7 @@ jobs:
             - desktop
             - server
           suite:
+            - jammy
             - noble
     steps:
       - name: Get more disk space
@@ -116,6 +117,7 @@ jobs:
           - desktop
           - server
         suite:
+          - jammy
           - noble
 
     steps:
